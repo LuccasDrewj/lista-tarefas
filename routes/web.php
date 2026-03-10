@@ -22,3 +22,6 @@ Route::get('/', function () {
 
 Route::get('/tarefa', [TarefaController::class, 'index']);
 Route::get('/users', [UserController::class, 'index']);
+
+route::get('/cadastrar', 'App\Http\Controllers\UserController@create');
+route::post('/enviarCadastro', 'App\Http\Controllers\UserController@store');

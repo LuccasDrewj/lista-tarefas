@@ -22,4 +22,14 @@ class TarefaController extends Controller
             echo $c->email;
         }*/
     }
+
+    public function create() {
+        return view('nivelUsuario/criarTarefa');
+    }
+
+    public function store() {
+        $tarefa = new Tarefa();
+
+        
+    }
 }
