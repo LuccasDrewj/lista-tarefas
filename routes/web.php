@@ -22,6 +22,9 @@ Route::get('/', function () {
 
 Route::get('/tarefa', [TarefaController::class, 'index']);
 Route::get('/users', [UserController::class, 'index']);
+Route::get('/login', [UserController::class, 'viewLogin']);
+Route::get('/home', [UserController::class, 'home']);
+Route::post('/login', [UserController::class, 'login']);
 
 route::get('/cadastrar', 'App\Http\Controllers\UserController@create');
 route::post('/enviarCadastro', 'App\Http\Controllers\UserController@store');

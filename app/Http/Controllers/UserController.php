@@ -13,6 +13,30 @@ class UserController extends Controller
         return view('users', compact('users'));
     }
 
+    public function viewLogin() {
+        return view('/nivelUsuario/login');
+    }
+
+    public function login(Request $request){
+        $user = User::where('email', $request->email)
+        ->where('password', $request->senha)
+        ->first();
+
+        if($user){
+            
+            session(['usuario' => $user->name]);
+
+            return redirect('/home');
+        } else {
+            $erro = "Email ou senha incorreto!";
+            return view('nivelUsuario/login', compact('erro'));
+        }
+    }
+
+    public function home(){
+        return view('/nivelUsuario/home');
+    }
+
     public function create() {
         return view('nivelUsuario/cadastrarUser');
     }

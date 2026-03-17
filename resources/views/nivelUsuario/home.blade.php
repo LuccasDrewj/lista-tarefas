@@ -6,6 +6,10 @@
     <title>Home</title>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="nomeUser">
+            <p><h1>Bem vindo {{ session('usuario') }}!</h1></p>
+        </div>
+    </nav>
 </body>
 </html>

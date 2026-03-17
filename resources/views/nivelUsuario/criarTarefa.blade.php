@@ -13,7 +13,7 @@
     <div class="conteudo">
     
     <div class="formulario">
-        <form action="/enviarCadastro" method="post" class="formAction">
+        <form action="/enviarTarefa" method="post" class="formAction">
         @csrf 
             <div class="divCampo">
                 <p>Titulo da Tarefa</p>

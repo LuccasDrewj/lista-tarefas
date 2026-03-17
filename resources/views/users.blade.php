@@ -13,9 +13,11 @@
     <div class="conteudo">
     @foreach($users as $c)
     <div class="usuarios">
+        <p>NOME: {{$c->name}}</p>
+        <hr>
+        <p>EMAIL: {{$c->email}} </p>
+        <hr>
         <p>ID: {{$c->id}}</p>
-        <p> NOME: {{$c->name}}</p>
-        <p>EMAIL: {{$c->email}}</p>
     </div>
     @endforeach
     </div>
