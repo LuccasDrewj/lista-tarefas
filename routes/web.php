@@ -20,8 +20,15 @@ Route::get('/', function () {
     
 });
 
-Route::get('/tarefa', [TarefaController::class, 'index']);
+/*Route::get('/tarefa', [TarefaController::class, 'index']);*/
 Route::get('/users', [UserController::class, 'index']);
+Route::get('/login', [UserController::class, 'viewLogin']);
+Route::get('/home', [UserController::class, 'index']);
+Route::get('/homeTarefas', [TarefaController::class, 'index']);
+Route::post('/login', [UserController::class, 'login']);
 
-route::get('/cadastrar', 'App\Http\Controllers\UserController@create');
-route::post('/enviarCadastro', 'App\Http\Controllers\UserController@store');
+Route::get('/cadastrar', 'App\Http\Controllers\UserController@create');
+Route::post('/enviarCadastro', 'App\Http\Controllers\UserController@store');
+
+Route::get('/criarTarefa', 'App\Http\Controllers\TarefaController@create');
+Route::post('/enviarTarefa', 'App\Http\Controllers\TarefaController@store');

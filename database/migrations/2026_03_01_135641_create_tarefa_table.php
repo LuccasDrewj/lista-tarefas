@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('descTarefa');
             $table->dateTime('prazo');
             $table->string('prioridade');
-            $table->string('status');
+            $table->foreignId('status_id')->constrained('status_tarefa');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

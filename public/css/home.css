@@ -1,0 +1,91 @@
+:root {
+    --corNavbar: #fff
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('/imagens/fundo/fundo2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    background-color: rgba(67, 69, 71, 0.452);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.conteudo {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.formLateral{
+    top: 30px;
+    width: 30%;
+    background-color: aliceblue;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.tarefas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 70%;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.tarefa {
+    flex: 0 0 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #00000018;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inpute {
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.194);
+    border-radius: 10px;
+}
+
+.botao {
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(53, 145, 226);
+}
+
+.hr {
+    height: 2px;
+    background-color: aquamarine;
+    border: none;
+}

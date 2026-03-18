@@ -33,6 +33,7 @@
             </div>
 
         </form>
+        <p>Seja muito bem vindo!</p>
     </div>
     
     </div>

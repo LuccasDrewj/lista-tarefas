@@ -1,3 +1,7 @@
+:root {
+    --corNavbar: #fff
+}
+
 body {
     min-height: 100vh;
     overflow: hidden;
@@ -14,13 +18,6 @@ body {
     background-size: cover;
 }
 
-hr {
-    width: 95%;
-    height: 1px;
-    background-color: #334469;
-    border: none;
-}
-
 .navbar {
     height: 60px;
     width: 100%;
@@ -35,33 +32,35 @@ hr {
     color: white;
 }
 
-.usuarios {
-    width: 30%;
-    height: 200px;
-    background-color: rgba(202, 223, 226, 0.479);
-    backdrop-filter: blur(20px);
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    border-radius: 7px;
-
-    border: 1px solid #0000001c;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.267);
-}
-
-.usuarios p {
-    text-align: left;
-    width: 100%;
-    margin-left: 15px;
-}
-
 .conteudo {
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.login{
+    width: 25%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.inpute {
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.194);
+    border-radius: 10px;
+}
+
+.entrar {
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(53, 145, 226);
 }
