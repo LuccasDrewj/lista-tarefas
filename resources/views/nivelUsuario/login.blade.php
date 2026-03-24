@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url('css/login.css')}}">
     <title>Login</title>
 </head>
 <body>
-    <div class="conteudo">
+    <nav class="navbar">
+        
+            <h1>Login</h1>
 
+    </nav>
+    <div class="conteudo">
+        <div class="login">
         <form action="/login" method="post">
             @csrf
             <h1>Login</h1>
@@ -22,7 +28,10 @@
             @endif
             <br>
             <input type="submit" value="Entrar!" class="entrar">
+
+            <a href="/cadastrar">nao tem conta? cadastre-se!</a>
         </form>
+        </div>
     </div>
 </body>
 </html>

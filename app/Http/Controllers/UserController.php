@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -24,17 +25,23 @@ class UserController extends Controller
 
         if($user){
             
-            session(['usuario' => $user->name]);
+            session(['usuario' => $user->name,'user_id' => $user->id]);
 
-            return redirect('/home');
+            return redirect('/homeTarefas');
         } else {
             $erro = "Email ou senha incorreto!";
             return view('nivelUsuario/login', compact('erro'));
         }
     }
 
+    public function deslogar() {
+        session_destroy();
+
+        return redirect('/login');
+    }
+
     public function home(){
-        return view('/nivelUsuario/home');
+        return view('nivelUsuario.homeTarefas', compact('tarefa'));
     }
 
     public function create() {
@@ -53,7 +60,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return view('nivelUsuario.CadastrarUser');
+        return redirect('/login');
 
     }
 }

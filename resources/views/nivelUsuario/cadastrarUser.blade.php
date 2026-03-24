@@ -31,6 +31,7 @@
             <div class="divBotao">
                 <input type="submit" value="enviar" class="botao">
             </div>
+            <a href="/login">Ja tem uma conta? Faça Login!</a>
 
         </form>
         <p>Seja muito bem vindo!</p>
