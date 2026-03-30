@@ -13,9 +13,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-image: url('/imagens/fundo/fundo2.jpg');
+    background-image: url('/imagens/fundo/fundo4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    font-family: "Lato", sans-serif;
 }
 
 .navbar {
@@ -24,12 +26,37 @@ body {
     position: fixed;
     margin: 0;
     top: 0;
-    background-color: rgba(67, 69, 71, 0.452);
+    background-color: rgba(67, 69, 71, 0.377);
     backdrop-filter: blur(20px);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+        width: 100%;
+}
+
+.imagemLogo {
+    height: 50px;
+}
+
+.tituloNav {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.feliz {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .conteudo {
@@ -44,22 +71,31 @@ body {
     height: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: aliceblue;
+    background-color: rgba(202, 223, 226, 0.425);
+    backdrop-filter: blur(15px);
+    border: 1px solid #0000001c;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.267);
     margin: 30px;
     padding: 30px;
     border-radius: 10px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .inpute {
     width: 100%;
-    height: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.194);
+    height: 30px;
+    border: none;
     border-radius: 10px;
 }
 
 .entrar {
     width: 100%;
-    height: 25px;
+    height: 30px;
     border-radius: 10px;
     border: none;
     background-color: rgb(53, 145, 226);

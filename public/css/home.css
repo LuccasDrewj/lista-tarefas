@@ -1,10 +1,9 @@
 :root {
-    --corNavbar: #fff
+    --corNavbar: #000
 }
 
 body {
     min-height: 100vh;
-    overflow: hidden;
     padding: 0;
     margin: 0;
     padding-top: 60px;
@@ -13,9 +12,12 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-image: url('/imagens/fundo/fundo2.jpg');
+    background-image: url('/imagens/fundo/fundo4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+
+    font-family: "Lato", sans-serif;
 }
 
 .navbar {
@@ -24,64 +26,118 @@ body {
     position: fixed;
     margin: 0;
     top: 0;
-    background-color: rgba(67, 69, 71, 0.452);
+    background-color: rgba(67, 69, 71, 0.377);
     backdrop-filter: blur(20px);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: white;
+    z-index: 1000;
+}
+
+.tituloPagina {
+    margin: 2%;
+}
+
+.perfil {
+    margin: 2%;
+}
+
+.imagemPerfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
 }
 
 .conteudo {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
+    min-height: 100vh;
+    justify-content: center; /* Centraliza o conjunto na tela */
+    align-items: flex-start;  /* COLA TUDO NO TOPO */
     flex-direction: row;
+    gap: 20px; /* Cria o espaço entre o form e as tarefas de forma limpa */
 }
 
 .formLateral{
-    top: 30px;
     width: 30%;
-    background-color: aliceblue;
+    align-self: stretch;
+    background-color: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(15px);
     margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.sessaotarefas {
+    display: flex;
+    flex-direction: column; /* Fundamental para empilhar Título e Lista */
+    align-self: flex-start;  /* Mude de stretch para flex-start para não esticar vazio */
+    width: 65%; 
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(15px);
     padding: 30px;
     border-radius: 10px;
 }
 
 .tarefas {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Faz quebrar a linha quando não houver espaço */
     gap: 20px;
-    width: 70%;
-    background-color: aliceblue;
-    padding: 30px;
-    border-radius: 10px;
+    width: 100%;
+    padding: 20px 0; /* Padding apenas vertical para desgrudar do título */
+    justify-content: flex-start; /* Alinha os cards à esquerda */
+}
+.tituloSessaoTarefas {
+    height: min-content;
+    width: 100%;
 }
 
 .tarefa {
-    flex: 0 0 150px;
+    flex: 0 0 180px; /* Tamanho fixo para cada card */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     border: 1px solid #00000018;
     padding: 10px;
     border-radius: 10px;
+    background-color: white; /* Adicione um fundo para destacar do aliceblue */
+    height: 250px; /* Altura fixa ou use min-height */
+}
+
+.topoTarefa {
+    background-color: rgb(25, 77, 187);
+    margin: -10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.topoTarefa p {
+    color: white;
+    text-align: center;
+}
+
+.descTarefa p {
+    text-align: justify;
+    text-wrap: pretty;
 }
 
 .inpute {
     width: 100%;
     height: 25px;
     border: 1px solid rgba(0, 0, 0, 0.194);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .botao {
     width: 100%;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     background-color: rgb(53, 145, 226);
+    cursor: pointer;
 }
 
 .hr {
