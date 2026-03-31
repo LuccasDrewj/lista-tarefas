@@ -18,4 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/user', 'App\Http\Controllers\UserController@indexApi');
+Route::post('/user', 'App\Http\Controllers\UserController@storeApi');
+Route::delete('/user/{id}','App\Http\Controllers\UserController@destroyApi');
+Route::put('/contato/{id}','App\Http\Controllers\UserController@updateApi');
+
 
